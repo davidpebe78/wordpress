@@ -12,8 +12,10 @@ services:
             - MYSQL_DATABASE=$MYSQL_DATABASE
             - MYSQL_USER=$MYSQL_USER
             - MYSQL_PASSWORD=$MYSQL_PASSWORD
+#        ports:
+#            - 3307:3306
     web:
-        image: wordpress:6.0.1-fpm-alpine
+        image: wordpress
         depends_on:
             - db
         restart: unless-stopped
